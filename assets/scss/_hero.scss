@@ -1,0 +1,466 @@
+/*----------------------------------------*/
+/*  03. Hero CSS
+/*----------------------------------------*/
+
+/*-- Hero Slider One --*/
+.hero-slider-one, .hero-slider-three {
+    & .slick-arrow {
+        position: absolute;
+        top: 50%;
+        border: none;
+        z-index: 9;
+        width: 60px;
+        height: 60px;
+        margin-top: -30px;
+        background-color: $theme-color-two;
+        color: $heading-color;
+        border-radius: 50%;
+        & i {
+            font-size: 30px;
+            line-height: 60px;
+        }
+        &.slick-prev {
+            left: 40px;
+        }
+        &.slick-next {
+            right: 40px;
+        }
+        
+        &:hover {
+            background-color: $theme-color-one;
+            color: $white;
+        }
+    }
+    
+    & .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+        background-color: $theme-color-two;
+        padding: 10px;
+        border-radius: 50px;
+        & li {
+            line-height: 14px;
+            margin: 1px 5px 0;
+            float: left;
+            & button {
+                background-color: transparent;
+                border: 1px solid $heading-color;
+                padding: 0;
+                text-indent: -9999px;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+            }
+            &.slick-active {
+                & button {
+                    background-color: $theme-color-one;
+                    border-color: $theme-color-one;
+                }
+            }
+        }
+    }
+    
+    // Responsive
+    @media #{$tablet-device}{
+        & .slick-arrow {
+            display: none !important;
+        }
+    }
+    @media #{$large-mobile}{
+        & .slick-arrow {
+            display: none !important;
+        }
+    
+        & .slick-dots {
+            bottom: 10px;
+            padding: 8px;
+        }
+    }
+}
+
+/*-- Hero Item --*/
+.hero-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 190px 30px;
+    display: flex !important;
+    justify-content: center;
+        
+    // Responsive
+    @media #{$laptop-device}{
+        padding: 90px 30px;
+    }
+    @media #{$desktop-device}{
+        padding: 100px 30px;
+    }
+    @media #{$tablet-device}{
+        padding: 120px 30px;
+    }
+    @media #{$large-mobile}{
+        padding: 80px 30px;
+    }
+    @media #{$large-mobile}{
+        padding: 50px 30px;
+    }
+}
+.hero-slider-three {
+	& .hero-item {
+		@media #{$laptop-device}{
+			padding: 140px 30px;
+		}
+	}
+}
+
+/*-- Hero Content --*/
+.hero-content {
+    text-align: center;
+    background-color: rgba($theme-color-two, 0.45);
+    padding: 77px 140px 87px;
+    
+    & h1 {
+        font-size: 60px;
+        line-height: 66px;
+        margin-bottom: 26px;
+        font-weight: 700;
+    }
+    & a {
+        font-family: $heading-font;
+        color: $heading-color;
+        font-size: 18px;
+        border-radius: 50px;
+        font-weight: 700;
+        background-color: $theme-color-two;
+        line-height: 24px;
+        padding: 13px 30px;
+        display: inline-flex;
+        box-shadow: 0 2px 1px $heading-color;
+        
+        &:hover {
+            background-color: $theme-color-one;
+            color: $white;
+        }
+    }
+	
+    // Responsive
+    @media #{$laptop-device}{
+        padding: 57px 140px 67px;
+        & h1 {
+            font-size: 50px;
+            line-height: 56px;
+        }
+    }
+    @media #{$desktop-device}{
+        padding: 57px 100px 67px;
+    
+        & h1 {
+            font-size: 40px;
+            line-height: 46px;
+            margin-bottom: 26px;
+        }
+        & a {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 8px 30px;
+        }
+    }
+    @media #{$tablet-device}{
+        padding: 57px 100px 67px;
+    
+        & h1 {
+            font-size: 40px;
+            line-height: 46px;
+            margin-bottom: 26px;
+        }
+        & a {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 8px 30px;
+        }
+    }
+    @media #{$large-mobile}{
+        padding: 30px 50px;
+    
+        & h1 {
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 26px;
+        }
+        & a {
+            font-size: 12px;
+            line-height: 24px;
+            padding: 5px 20px;
+        }
+    }
+    @media #{$small-mobile}{
+        padding: 30px;
+    
+        & h1 {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+/*-- Hero Slider Two --*/
+.hero-slider-two {
+    & .slick-arrow {
+        position: absolute;
+        top: 50%;
+        border: none;
+        z-index: 9;
+        width: 60px;
+        height: 60px;
+        margin-top: -30px;
+        background-color: $white;
+        color: $heading-color;
+        border-radius: 50%;
+        & i {
+            font-size: 30px;
+            line-height: 60px;
+        }
+        &.slick-prev {
+            left: 40px;
+        }
+        &.slick-next {
+            right: 40px;
+        }
+        
+        &:hover {
+            background-color: $heading-color;
+            color: $white;
+        }
+    }
+    
+    & .slick-dots {
+        display: none !important;
+        position: absolute;
+        width: 100%;
+        padding: 0 15px;
+        left: 0;
+        bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        line-height: 1;
+        & li {
+            display: inline-flex;
+            margin: 0 5px;
+            & button {
+                width: 14px;
+                height: 14px;
+                padding: 0;
+                border-radius: 50%;
+                border: 2px solid $heading-color;
+                background-color: transparent;
+                text-indent: -9999px;
+            }
+            &.slick-active {
+                & button {
+                    background-color: $heading-color;
+                }
+            }
+        }
+    }
+    
+    // Responsive
+    @media #{$laptop-device}{
+        & .slick-arrow {
+            &.slick-prev {
+                left: 10px;
+            }
+            &.slick-next {
+                right: 10px;
+            }
+        }
+    }
+    @media #{$desktop-device}{
+        & .slick-arrow {
+            display: none !important;
+        }
+        & .slick-dots {
+            display: flex !important;
+        }
+    }
+    @media #{$tablet-device}{
+        & .slick-arrow {
+            display: none !important;
+        }
+        & .slick-dots {
+            display: flex !important;
+        }
+    }
+    @media #{$large-mobile}{
+        & .slick-arrow {
+            display: none !important;
+        }
+        & .slick-dots {
+            display: flex !important;
+            bottom: 12px;
+        }
+    }
+}
+
+/*-- Hero Item Two --*/
+.hero-item-2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex !important;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/*-- Hero Content Two --*/
+.hero-content-2 {
+    
+    & h1 {
+        font-size: 60px;
+        line-height: 76px;
+        margin-bottom: 39px;
+        font-weight: 700;
+        & span {
+            color: $white;
+        }
+    }
+    & a {
+        font-family: $heading-font;
+        color: $theme-color-one;
+        font-size: 18px;
+        border-radius: 50px;
+        background-color: $white;
+        line-height: 24px;
+        font-weight: 700;
+        padding: 13px 30px;
+        display: inline-flex;
+        box-shadow: 0 2px 1px $heading-color;
+        
+        &:hover {
+            background-color: $theme-color-one;
+            color: $white;
+        }
+    }
+        
+    // Responsive
+    @media #{$laptop-device}{
+    
+        & h1 {
+            font-size: 50px;
+            line-height: 66px;
+            margin-bottom: 26px;
+        }
+        & a {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 8px 30px;
+        }
+    }
+    @media #{$desktop-device}{
+    
+        & h1 {
+            font-size: 50px;
+            line-height: 66px;
+            margin-bottom: 26px;
+        }
+        & a {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 8px 30px;
+        }
+    }
+    @media #{$tablet-device}{
+    
+        & h1 {
+            font-size: 40px;
+            line-height: 52px;
+            margin-bottom: 26px;
+        }
+        & a {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 8px 30px;
+        }
+    }
+    @media #{$large-mobile}{
+    
+        & h1 {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 26px;
+        }
+        & a {
+            font-size: 12px;
+            line-height: 24px;
+            padding: 5px 20px;
+        }
+    }
+    @media #{$small-mobile}{
+        & h1 {
+            font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+/*-- Hero Image Two --*/
+.hero-image-2 {
+    margin-left: auto;
+    margin-right: -60px;
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        content: "";
+        width: 500px;
+        height: 500px;
+        border: 25px solid $theme-color-one;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    & img {
+        max-width: 100%;
+    }
+    
+    // Responsive
+    @media #{$laptop-device}{
+        margin: auto;
+        max-width: 330px;
+        &::before {
+            width: 400px;
+            height: 400px;
+        }
+    }
+    @media #{$desktop-device}{
+        margin: auto;
+        max-width: 290px;
+        &::before {
+            width: 400px;
+            height: 400px;
+        }
+    }
+    @media #{$tablet-device}{
+        margin: auto;
+        max-width: 290px;
+        &::before {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    @media #{$large-mobile}{
+        max-width: 250px;
+        float: none;
+        margin: auto;
+        &::before {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}

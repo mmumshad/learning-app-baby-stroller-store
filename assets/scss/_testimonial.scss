@@ -1,0 +1,54 @@
+/*----------------------------------------*/
+/*  11. Testimonial CSS
+/*----------------------------------------*/
+
+/*-- Testimonial Item --*/
+.testimonial-item {
+    & > p {
+        font-size: 16px;
+        line-height: 28px;
+        color: $heading-color;
+        max-width: 510px;
+        float: left;
+        clear: both;
+        margin-bottom: 30px;
+        position: relative;
+        
+        &::before {
+            content: url(../images/icons/quote.png);
+            position: absolute;
+            right: 10px;
+            bottom: -20px;
+            line-height: 1;
+            font-size: 44px;
+            color: #eaeaea;
+        }
+    }
+    
+    /*-- Testimonial Author --*/
+    & .testimonial-author {
+        display: flex;
+        align-items: center;
+        flex: 1 0 100%;
+        float: left;
+        & img {
+            float: left;
+            margin-right: 25px;
+        }
+        & .content {
+            & h4 {
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: 600;
+                color: $heading-color;
+                margin-bottom: 2px;
+            }
+            & p {
+                font-size: 14px;
+                line-height: 22px;
+                color: $body-color;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

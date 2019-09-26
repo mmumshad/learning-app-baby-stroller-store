@@ -1,0 +1,86 @@
+/*---------------------------------------
+    14. Login & Register CSS
+-----------------------------------------*/
+
+/*-- Login & Register Form Wrap --*/
+.login-register-form-wrap {
+    & h3 {
+        font-size: 24px;
+        line-height: 1;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    & h4 {
+        font-size: 18px;
+        line-height: 1;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    & input {
+        width: 100%;
+        border: 1px solid $body-color;
+        background-color: transparent;
+        border-radius: 50px;
+        height: 44px;
+        line-height: 22px;
+        padding: 10px 20px;
+        font-size: 14px;
+        &[type="submit"] {
+            width: auto;
+            background-color: $heading-color;
+            color: $white;
+            text-transform: uppercase;
+            padding: 10px 30px;
+            font-weight: 600;
+            &:hover {
+                background-color: $theme-color-one;
+                border-color: $theme-color-one;
+            }
+        }
+    }
+    
+    /*-- Social Login --*/
+    & .social-login {
+        display: flex;
+        & a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid $heading-color;
+            color: $heading-color;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 15px;
+            & i {
+                font-size: 14px;
+                line-height: 34px;
+            }
+            &:hover {
+                background-color: $theme-color-one;
+                border-color: $theme-color-one;
+                color: $white;
+            }
+        }
+    }
+}
+
+/*-- Login & Register Separator --*/
+.login-register-separator {
+    width: 1px;
+    height: 150px;
+    background-color: #ccc;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+        
+    // Responsive
+    @media #{$tablet-device}{
+        margin-top: 0;
+        height: 80px;
+    }
+    @media #{$large-mobile}{
+        margin-top: 0;
+        height: 80px;
+    }
+}

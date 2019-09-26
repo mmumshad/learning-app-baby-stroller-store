@@ -1,0 +1,141 @@
+/*----------------------------------------*/
+/*  17. Footer CSS
+/*----------------------------------------*/
+.footer-top-section {
+    background-image: url(../images/pattern/pattern-dot.png);
+    background-repeat: repeat;
+}
+
+/*-- Footer Widget --*/
+.footer-widget {
+    
+    /*-- Title --*/
+    & .title {
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 700;
+        color: $heading-color;
+        padding-bottom: 7px;
+        position: relative;
+        margin-bottom: 32px;
+        &::before {
+            background-color: $theme-color-two;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 70px;
+            content: "";
+        }
+    }
+    
+    & h5 {
+        font-size: 16px;
+        line-height: 1;
+        color: $heading-color;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    & p {
+        font-size: 16px;
+        line-height: 28px;
+        color: $heading-color;
+        & a {
+            color: $heading-color;
+            display: block;
+            &:hover {
+                color: $theme-color-one;
+            }
+        }
+    }
+    & ul {
+        & li {
+            margin-bottom: 9px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & a {
+                display: block;
+                font-size: 16px;
+                line-height: 28px;
+                color: $heading-color;
+                &:hover {
+                    color: $theme-color-one;
+                }
+            }
+        }
+    }
+
+    /*-- Footer Social --*/
+    & .footer-social {
+        font-size: 16px;
+        line-height: 28px;
+        color: $heading-color;
+        & a {
+            color: $heading-color;
+            display: inline-block;
+            &:hover {
+                color: $theme-color-one;
+            }
+        }
+    }
+    
+    /*-- Footer Widget Two --*/
+    &.footer-widget-2 {
+        & .title {
+            &::before {
+                background-color: $theme-color-one;
+            }
+        }
+        & .footer-subscribe-form {
+            border-bottom: 1px solid $theme-color-one;
+        }
+    }
+}
+
+/*-- Footer Subscrib Form --*/
+.footer-subscribe-form {
+    border-bottom: 1px solid $theme-color-two;
+    position: relative;
+    margin-bottom: 40px;
+    & input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        line-height: 36px;
+        color: $heading-color;
+        padding-right: 30px;
+        &::-webkit-input-placeholder {
+            color: $heading-color;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder {
+            color: $heading-color;
+            opacity: 1;
+        }
+    }
+    & button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        color: $heading-color;
+        & i {
+            line-height: 36px;
+        }
+        &:hover {
+            color: $theme-color-one;
+        }
+    }
+}
+
+/*-- Footer Copyright --*/
+.footer-copyright {
+    font-size: 14px;
+    line-height: 30px;
+    color: $heading-color;
+    margin: 0;
+}

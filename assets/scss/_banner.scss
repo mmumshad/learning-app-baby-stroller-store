@@ -1,0 +1,1341 @@
+/*----------------------------------------*/
+/*  04. Banner CSS
+/*----------------------------------------*/
+.banner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    
+    & .image {
+        display: block;
+        & img {
+            width: 100%;
+        }
+    }
+    
+    &:hover {
+        & img {
+            transform: scale(1.1);
+        }
+        & .image {
+            & img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+    & .content {
+        position: absolute;
+        & h1 {
+            font-size: 36px;
+            font-family: $heading-font;
+            line-height: 44px;
+            font-weight: 700;
+            letter-spacing: 0.25px;
+        }
+        & h2 {
+            font-weight: 700;
+            letter-spacing: 0.25px;
+        }
+        & h3 {
+            font-weight: 700;
+            letter-spacing: 0.25px;
+        }
+        & h4 {
+            font-weight: 700;
+            letter-spacing: 0.25px;
+        }
+        & a {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.25px;
+            text-transform: uppercase;
+            font-family: $heading-font;
+            color: $heading-color;
+            border-bottom: 1px solid $heading-color;
+            position: relative;
+            z-index: 1;
+            
+            &::before {
+                content: attr(data-hover);
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: $theme-color-one;
+                border-bottom: 1px solid $theme-color-one;
+                z-index: 2;
+                width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                transition: all 0.3s ease 0s;
+            }
+            
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+        
+        // Responsive
+        @media #{$laptop-device}{
+            & h1 {
+                font-size: 24px;
+                line-height: 30px;
+            }
+            & h2 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            & h3 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            & h4 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & a {
+                font-size: 14px;
+            }
+        }
+        @media #{$desktop-device}{
+            & h1 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            & h2 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            & h3 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & h4 {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            & a {
+                font-size: 12px;
+            }
+        }
+        @media #{$tablet-device}{
+            & h1 {
+                font-size: 24px;
+                line-height: 30px;
+            }
+            & h2 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            & h3 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            & h4 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & a {
+                font-size: 14px;
+            }
+        }
+        @media #{$large-mobile}{
+            & h1 {
+                font-size: 24px;
+                line-height: 30px;
+            }
+            & h2 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            & h3 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            & h4 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & a {
+                font-size: 14px;
+            }
+        }
+        @media #{$small-mobile}{
+            & h1 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            & h2 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            & h3 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & h4 {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            & a {
+                font-size: 12px;
+            }
+        }
+    }
+    
+    /*-- Home Two Banner --*/
+    &.home-2-banner {
+        & .content {
+            & a {
+                &::before {
+                    color: $theme-color-two;
+                    border-bottom: 1px solid $theme-color-two;
+                }
+            }
+        }
+    }
+    
+    // Banner One
+    &.banner-1 {
+    
+        & .content {
+            & h1 {
+                color: $heading-color;
+                margin-bottom: 18px;
+            }
+            & a {}
+        }
+        
+        &.content-left {
+            & .content {
+                left: 30px;
+                right: auto;
+            }
+        }
+        &.content-right {
+            & .content {
+                left: auto;
+                right: 30px;
+            }
+        }
+        &.content-top {
+            & .content {
+                top: 40px;
+                bottom: auto;
+            }
+        }
+        &.content-bottom {
+            & .content {
+                top: auto;
+                bottom: 40px;
+            }
+        }
+        &.content-middle {
+            & .content {
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+        }
+        
+        // Responsive
+        @media #{$laptop-device}{
+            & .content {
+                & h1 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        @media #{$desktop-device}{
+            & .content {
+                & h1 {
+                    margin-bottom: 10px;
+                }
+            }
+            &.content-left {
+                & .content {
+                    left: 20px;
+                }
+            }
+            &.content-right {
+                & .content {
+                    right: 20px;
+                }
+            }
+            &.content-top {
+                & .content {
+                    top: 20px;
+                }
+            }
+            &.content-bottom {
+                & .content {
+                    bottom: 20px;
+                }
+            }
+        }
+        @media #{$tablet-device}{
+            & .content {
+                & h1 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        @media #{$large-mobile}{
+            & .content {
+                & h1 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        @media #{$small-mobile}{
+            & .content {
+                & h1 {
+                    margin-bottom: 10px;
+                }
+            }
+            &.content-left {
+                & .content {
+                    left: 20px;
+                }
+            }
+            &.content-right {
+                & .content {
+                    right: 20px;
+                }
+            }
+            &.content-top {
+                & .content {
+                    top: 20px;
+                }
+            }
+            &.content-bottom {
+                & .content {
+                    bottom: 20px;
+                }
+            }
+        }
+        
+    }
+    
+    // Banner Two
+    &.banner-2 {
+        & img {
+            width: 100%;
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            max-width: 205px;
+            padding: 40px 50px;
+            background-image: url(../images/pattern/pattern-dot.png);
+            display: flex;
+            align-items: center;
+            
+            & h1 {
+                color: $white;
+                margin: 0;
+            }
+        }
+        
+        & .banner-offer {
+            position: absolute;
+            right: -40px;
+            top: -50px;
+            color: $theme-color-one;
+            background-color: #e6f5ff;
+            font-size: 36px;
+            font-weight: 700;
+            font-family: $heading-font;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: block;
+            padding: 70px 50px;
+            line-height: 1;
+        }
+        
+        &.content-right {
+            & .content {
+                left: auto;
+                right: 0;
+            }
+
+            & .banner-offer {
+                left: -40px;
+                right: auto;
+                padding: 70px 30px 70px 70px;
+            }
+        }
+        
+        // Responsive
+        @media #{$laptop-device}{
+            & .content {
+                max-width: 130px;
+                padding: 30px;
+            }
+
+            & .banner-offer {
+                top: -35px;
+                font-size: 24px;
+                width: 140px;
+                height: 125px;
+                padding: 50px 35px 35px;
+            }
+        
+            &.content-right {
+                & .banner-offer {
+                    padding: 60px 20px 70px 60px;
+                }
+            }
+        }
+        @media #{$desktop-device}{
+            & .content {
+                max-width: 100px;
+                padding: 20px;
+            }
+
+            & .banner-offer {
+                top: -35px;
+                font-size: 18px;
+                width: 110px;
+                height: 100px;
+                padding: 45px 30px 25px;
+                right: -30px;
+            }
+        
+            &.content-right {
+                & .banner-offer {
+                    left: -35px;
+                    right: auto;
+                    padding: 50px 20px 50px 50px;
+                }
+            }
+        }
+        @media #{$tablet-device}{
+            & .content {
+                max-width: 130px;
+                padding: 30px;
+            }
+
+            & .banner-offer {
+                top: -35px;
+                font-size: 18px;
+                width: 110px;
+                height: 100px;
+                padding: 45px 30px 25px;
+                right: -30px;
+            }
+        
+            &.content-right {
+                & .banner-offer {
+                    left: -30px;
+                    right: auto;
+                    padding: 50px 30px 60px 50px;
+                }
+            }
+        }
+        @media #{$large-mobile}{
+            & .content {
+                max-width: 130px;
+                padding: 30px;
+            }
+
+            & .banner-offer {
+                top: -35px;
+                font-size: 24px;
+                width: 140px;
+                height: 125px;
+                padding: 50px 35px 35px;
+            }
+        
+            &.content-right {
+                & .banner-offer {
+                    left: -30px;
+                    right: auto;
+                    padding: 50px 30px 60px 50px;
+                    width: 120px;
+                }
+            }
+        }
+        @media #{$small-mobile}{
+            & .content {
+                max-width: 90px;
+                padding: 20px;
+            }
+
+            & .banner-offer {
+                top: -35px;
+                font-size: 18px;
+                width: 110px;
+                height: 100px;
+                padding: 45px 30px 25px;
+                right: -30px;
+            }
+        
+            &.content-right {
+                & .banner-offer {
+                    left: -30px;
+                    right: auto;
+                    width: 100px;
+                    height: 100px;
+                    padding: 50px 30px 55px 45px;
+                }
+            }
+        }
+    }
+    
+    // Banner Three
+    &.banner-3 {
+        & img {
+            width: 100%;
+        }
+        & .content {
+            right: 0;
+            top: 0;
+            text-align: center;
+            background-image: url(../images/banner/banner-3-shape.png);
+            padding: 40px 25px 70px 60px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            & h1 {
+                color: $white;
+            }
+            & h2 {
+                color: $white;
+            }
+            & h4 {
+                color: $white;
+                margin: 0;
+            }
+        }
+        
+        & .shop-link {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: $heading-font;
+            color: $heading-color;
+            border-bottom: 1px solid $heading-color;
+            position: absolute;
+            left: 100px;
+            bottom: 50px;
+            z-index: 1;
+            
+            &::before {
+                content: attr(data-hover);
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: $theme-color-one;
+                border-bottom: 1px solid $theme-color-one;
+                z-index: 2;
+                width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                transition: all 0.3s ease 0s;
+            }
+            
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+        
+        &.home-2-banner {
+            & .shop-link {
+                &::before {
+                    color: $theme-color-two;
+                    border-bottom: 1px solid $theme-color-two;
+                }
+            }
+        }
+        
+        // Responsive
+        @media #{$laptop-device}{
+            & .content {
+                padding: 20px 15px 42px 40px;
+            }
+        
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+        }
+        @media #{$desktop-device}{
+            & .content {
+                padding: 20px 15px 42px 40px;
+            }
+        
+            & .shop-link {
+                font-size: 12px;
+                left: 30px;
+                bottom: 20px;
+            }
+        }
+        @media #{$tablet-device}{
+            & .content {
+                padding: 20px 15px 30px 36px;
+                & h1 {
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                }
+                & h2 {
+                    font-size: 16px;
+                }
+            }
+        
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+        }
+        @media #{$large-mobile}{
+            & .content {
+                padding: 20px 15px 42px 40px;
+            }
+        
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+        }
+        @media #{$small-mobile}{
+            & .content {
+                padding: 20px 15px 42px 40px;
+            }
+        
+            & .shop-link {
+                font-size: 12px;
+                left: 30px;
+                bottom: 20px;
+            }
+        }
+    }
+    
+    // Banner Four
+    &.banner-4 {
+        & img {
+            width: 100%;
+        }
+        & .content {
+            position: absolute;
+            left: 50px;
+            top: 0;
+            height: 100%;
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            & .content-inner {
+                text-align: center;
+                & a {
+                    margin-top: 20px;
+                }
+            }
+        }
+        
+        // Responsive
+        @media #{$laptop-device}{
+            & .content {
+                & .content-inner {
+                    & a {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        @media #{$desktop-device}{
+            & .content {
+                left: 30px;
+                & .content-inner {
+                    & a {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        @media #{$tablet-device}{
+            & .content {
+                & .content-inner {
+                    & a {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        // Responsive
+        @media #{$large-mobile}{
+            & .content {
+                & .content-inner {
+                    & a {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        @media #{$small-mobile}{
+            & .content {
+                left: 30px;
+                & .content-inner {
+                    & a {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Banner FIve
+    &.banner-5 {
+        & img {
+            width: 100%;
+        }
+        & .content {
+            left: 0;
+            top: 0;
+            text-align: center;
+            background-image: url(../images/banner/banner-5-shape.png);
+            padding: 14px 35px 65px 35px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            & h1 {
+                color: $white;
+                line-height: 40px;
+            }
+            & h2 {
+                color: $white;
+                margin: 0;
+            }
+        }
+        
+        & .shop-link {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: $heading-font;
+            color: $heading-color;
+            border-bottom: 1px solid $heading-color;
+            position: absolute;
+            left: 80px;
+            bottom: 100px;
+            z-index: 1;
+            
+            &::before {
+                content: attr(data-hover);
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: $theme-color-one;
+                border-bottom: 1px solid $theme-color-one;
+                z-index: 2;
+                width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                transition: all 0.3s ease 0s;
+            }
+            
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+        
+        &.home-2-banner {
+            & .shop-link {
+                &::before {
+                    color: $theme-color-two;
+                    border-bottom: 1px solid $theme-color-two;
+                }
+            }
+        }
+        
+        // Responsive
+        @media #{$laptop-device}{
+            & .content {
+                padding: 15px 37px 47px 35px;
+                & h1 {
+                    line-height: 30px;
+                }
+            }
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+        }
+        @media #{$desktop-device}{
+            & .content {
+                padding: 10px 30px 36px 27px;
+                & h1 {
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                }
+            }
+            & .shop-link {
+                font-size: 12px;
+                left: 30px;
+                bottom: 20px;
+            }
+        }
+        @media #{$tablet-device}{
+            & .content {
+                padding: 18px 35px 38px 30px;
+                & h1 {
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                }
+                & h2 {
+                    font-size: 16px;
+                }
+            }
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+        }
+        @media #{$large-mobile}{
+            & .content {
+                padding: 20px 38px 45px 38px;
+                & h1 {
+                    line-height: 30px;
+                }
+            }
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+        }
+        @media #{$small-mobile}{
+            & .content {
+                padding: 10px 26px 31px 25px;
+                & h1 {
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                }
+            }
+            & .shop-link {
+                font-size: 12px;
+                left: 30px;
+                bottom: 20px;
+            }
+        }
+    }
+    
+}
+
+.box-layout {
+    & .banner {
+
+        & .content {
+            position: absolute;
+            & h1 {
+                font-size: 24px;
+                line-height: 30px;
+            }
+            & h2 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            & h3 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            & h4 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            & a {
+                font-size: 14px;
+            }
+
+            // Responsive
+            @media #{$desktop-device}{
+                & h1 {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                & h2 {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                & h3 {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                & h4 {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                & a {
+                    font-size: 12px;
+                }
+            }
+            @media #{$tablet-device}{
+                & h1 {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                & h2 {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                & h3 {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                & h4 {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                & a {
+                    font-size: 14px;
+                }
+            }
+            @media #{$large-mobile}{
+                & h1 {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                & h2 {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                & h3 {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                & h4 {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                & a {
+                    font-size: 14px;
+                }
+            }
+            @media #{$small-mobile}{
+                & h1 {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                & h2 {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                & h3 {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                & h4 {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                & a {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        // Banner One
+        &.banner-1 {
+            & .content {
+                & h1 {
+                    margin-bottom: 10px;
+                }
+            }
+
+            // Responsive
+            @media #{$desktop-device}{
+                & .content {
+                    & h1 {
+                        margin-bottom: 10px;
+                    }
+                }
+                &.content-left {
+                    & .content {
+                        left: 20px;
+                    }
+                }
+                &.content-right {
+                    & .content {
+                        right: 20px;
+                    }
+                }
+                &.content-top {
+                    & .content {
+                        top: 20px;
+                    }
+                }
+                &.content-bottom {
+                    & .content {
+                        bottom: 20px;
+                    }
+                }
+            }
+            @media #{$tablet-device}{
+                & .content {
+                    & h1 {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            @media #{$large-mobile}{
+                & .content {
+                    & h1 {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            @media #{$small-mobile}{
+                & .content {
+                    & h1 {
+                        margin-bottom: 10px;
+                    }
+                }
+                &.content-left {
+                    & .content {
+                        left: 20px;
+                    }
+                }
+                &.content-right {
+                    & .content {
+                        right: 20px;
+                    }
+                }
+                &.content-top {
+                    & .content {
+                        top: 20px;
+                    }
+                }
+                &.content-bottom {
+                    & .content {
+                        bottom: 20px;
+                    }
+                }
+            }
+
+        }
+
+        // Banner Two
+        &.banner-2 {
+            & .content {
+                max-width: 130px;
+                padding: 30px;
+            }
+
+            & .banner-offer {
+                top: -35px;
+                font-size: 24px;
+                width: 140px;
+                height: 125px;
+                padding: 50px 35px 35px;
+            }
+        
+            &.content-right {
+                & .banner-offer {
+                    padding: 60px 20px 70px 60px;
+                }
+            }
+
+            // Responsive
+            @media #{$desktop-device}{
+                & .content {
+                    max-width: 100px;
+                    padding: 20px;
+                }
+
+                & .banner-offer {
+                    top: -35px;
+                    font-size: 18px;
+                    width: 110px;
+                    height: 100px;
+                    padding: 45px 30px 25px;
+                    right: -30px;
+                }
+
+                &.content-right {
+                    & .banner-offer {
+                        left: -35px;
+                        right: auto;
+                        padding: 50px 20px 50px 50px;
+                    }
+                }
+            }
+            @media #{$tablet-device}{
+                & .content {
+                    max-width: 130px;
+                    padding: 30px;
+                }
+
+                & .banner-offer {
+                    top: -35px;
+                    font-size: 18px;
+                    width: 110px;
+                    height: 100px;
+                    padding: 45px 30px 25px;
+                    right: -30px;
+                }
+
+                &.content-right {
+                    & .banner-offer {
+                        left: -30px;
+                        right: auto;
+                        padding: 50px 30px 60px 50px;
+                    }
+                }
+            }
+            @media #{$large-mobile}{
+                & .content {
+                    max-width: 130px;
+                    padding: 30px;
+                }
+
+                & .banner-offer {
+                    top: -35px;
+                    font-size: 24px;
+                    width: 140px;
+                    height: 125px;
+                    padding: 50px 35px 35px;
+                }
+
+                &.content-right {
+                    & .banner-offer {
+                        left: -30px;
+                        right: auto;
+                        padding: 50px 30px 60px 50px;
+                        width: 120px;
+                    }
+                }
+            }
+            @media #{$small-mobile}{
+                & .content {
+                    max-width: 90px;
+                    padding: 20px;
+                }
+
+                & .banner-offer {
+                    top: -35px;
+                    font-size: 18px;
+                    width: 110px;
+                    height: 100px;
+                    padding: 45px 30px 25px;
+                    right: -30px;
+                }
+
+                &.content-right {
+                    & .banner-offer {
+                        left: -30px;
+                        right: auto;
+                        width: 100px;
+                        height: 100px;
+                        padding: 50px 30px 55px 45px;
+                    }
+                }
+            }
+        }
+
+        // Banner Three
+        &.banner-3 {
+            & .content {
+                padding: 20px 15px 42px 40px;
+            }
+        
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+            // Responsive
+            @media #{$desktop-device}{
+                & .content {
+                    padding: 20px 15px 42px 40px;
+                }
+
+                & .shop-link {
+                    font-size: 12px;
+                    left: 30px;
+                    bottom: 20px;
+                }
+            }
+            @media #{$tablet-device}{
+                & .content {
+                    padding: 20px 15px 30px 36px;
+                    & h1 {
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin-bottom: 5px;
+                    }
+                    & h2 {
+                        font-size: 16px;
+                    }
+                }
+
+                & .shop-link {
+                    font-size: 16px;
+                    left: 40px;
+                    bottom: 30px;
+                }
+            }
+            @media #{$large-mobile}{
+                & .content {
+                    padding: 20px 15px 42px 40px;
+                }
+
+                & .shop-link {
+                    font-size: 16px;
+                    left: 40px;
+                    bottom: 30px;
+                }
+            }
+            @media #{$small-mobile}{
+                & .content {
+                    padding: 20px 15px 42px 40px;
+                }
+
+                & .shop-link {
+                    font-size: 12px;
+                    left: 30px;
+                    bottom: 20px;
+                }
+            }
+        }
+
+        // Banner Four
+        &.banner-4 {
+            & .content {
+                & .content-inner {
+                    & a {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            // Responsive
+            @media #{$desktop-device}{
+                & .content {
+                    left: 30px;
+                    & .content-inner {
+                        & a {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            @media #{$tablet-device}{
+                & .content {
+                    & .content-inner {
+                        & a {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+            // Responsive
+            @media #{$large-mobile}{
+                & .content {
+                    & .content-inner {
+                        & a {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+            @media #{$small-mobile}{
+                & .content {
+                    left: 30px;
+                    & .content-inner {
+                        & a {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Banner FIve
+        &.banner-5 {
+            & .content {
+                padding: 15px 37px 47px 35px;
+                & h1 {
+                    line-height: 30px;
+                }
+            }
+            & .shop-link {
+                font-size: 16px;
+                left: 40px;
+                bottom: 30px;
+            }
+            // Responsive
+            @media #{$desktop-device}{
+                & .content {
+                    padding: 10px 30px 36px 27px;
+                    & h1 {
+                        line-height: 24px;
+                        margin-bottom: 5px;
+                    }
+                }
+                & .shop-link {
+                    font-size: 12px;
+                    left: 30px;
+                    bottom: 20px;
+                }
+            }
+            @media #{$tablet-device}{
+                & .content {
+                    padding: 18px 35px 38px 30px;
+                    & h1 {
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin-bottom: 5px;
+                    }
+                    & h2 {
+                        font-size: 16px;
+                    }
+                }
+                & .shop-link {
+                    font-size: 16px;
+                    left: 40px;
+                    bottom: 30px;
+                }
+            }
+            @media #{$large-mobile}{
+                & .content {
+                    padding: 20px 38px 45px 38px;
+                    & h1 {
+                        line-height: 30px;
+                    }
+                }
+                & .shop-link {
+                    font-size: 16px;
+                    left: 40px;
+                    bottom: 30px;
+                }
+            }
+            @media #{$small-mobile}{
+                & .content {
+                    padding: 10px 26px 31px 25px;
+                    & h1 {
+                        line-height: 24px;
+                        margin-bottom: 5px;
+                    }
+                }
+                & .shop-link {
+                    font-size: 12px;
+                    left: 30px;
+                    bottom: 20px;
+                }
+            }
+        }
+
+    }
+}

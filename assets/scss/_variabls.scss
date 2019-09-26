@@ -1,0 +1,32 @@
+// Font Family
+$body-font: 'Poppins', sans-serif;
+$heading-font: 'Dosis', sans-serif;
+
+
+// Colors ---------------
+
+$white: #ffffff;
+$black: #000000;
+$grey: #f6f7f8;
+
+// Body Color
+$body-color: #333333;
+
+// Heading Color
+$heading-color: #1a161e;
+$heading-color-light: #323132;
+
+// Theme Color
+$theme-color-one: #ff708a;
+$theme-color-two: #94c7eb;
+
+
+
+// Responsive Variables
+$extraBig-device : 'only screen and (min-width: 1600px)';
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+

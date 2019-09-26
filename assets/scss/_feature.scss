@@ -1,0 +1,183 @@
+/*----------------------------------------*/
+/*  10. Feature CSS
+/*----------------------------------------*/
+.feature-section {
+    background-repeat: repeat;
+}
+
+/*-- Feature Wrap --*/
+.feature-wrap {
+    
+    // Responsive
+    @media #{$large-mobile}{
+        justify-content: center;
+        & > .col, & > [class*="col-"] {
+            flex: 1 0 100%;
+        }
+    }
+}
+
+/*-- Feature Item --*/
+.feature-item {
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(55deg);
+        height: 1000%;
+        width: 80px;
+        background-color: rgba($white, 0.25);
+        margin-left: -40px;
+        z-index: -1;
+    }
+     &::after {
+        transform: translateX(50%) translateY(-50%) rotate(55deg);
+         margin-left: 40px;
+    }
+    
+    /*-- Icon --*/
+    & .icon {
+        margin-bottom: 20px;
+        & img {}
+    }
+    
+    /*-- Content --*/
+    & .content {
+        & h3 {
+            font-size: 24px;
+            line-height: 30px;
+            color: $heading-color;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        & p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 500;
+            font-family: $heading-font;
+            color: $heading-color-light;
+        }
+    }
+    
+    // Responsive
+    @media #{$tablet-device}{
+        &::before, &::after {
+            display: none;
+        }
+        & .content {
+            & h3 {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    @media #{$large-mobile}{
+        &::before, &::after {
+            display: none;
+        }
+    }
+    @media #{$small-mobile}{
+        & .content {
+            & h3 {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+/*-- Feature Item Two --*/
+.feature-item-2 {
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    padding: 50px 15px;
+    background-position: center center;
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/pattern/pattern-dot.png);
+        z-index: -1;
+    }
+    
+    /*-- Icon --*/
+    & .icon {
+        margin-bottom: 20px;
+        & img {}
+    }
+    
+    /*-- Content --*/
+    & .content {
+        & h3 {
+            font-size: 24px;
+            line-height: 30px;
+            color: $heading-color;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        & p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 500;
+            color: $heading-color-light;
+            font-family: $heading-font;
+        }
+    }
+    
+    // Responsive
+    @media #{$laptop-device}{
+        padding: 20px 15px;
+    }
+    @media #{$desktop-device}{
+        padding: 20px 15px;
+    }
+    @media #{$tablet-device}{
+        padding: 20px 15px;
+        & .content {
+            & h3 {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    @media #{$large-mobile}{
+        padding: 20px 15px;
+    }
+    @media #{$small-mobile}{
+        & .content {
+            & h3 {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+}

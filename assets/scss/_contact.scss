@@ -1,0 +1,97 @@
+/*----------------------------------------*/
+/*  16. Contact CSS
+/*----------------------------------------*/
+
+/*-- Contact Info Wrap --*/
+.contact-info-wrap {
+    & h3 {
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    & > p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+}
+
+/*-- Contact Info --*/
+.contact-info {
+    & li {
+        overflow: hidden;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & i {
+            float: left;
+            font-size: 24px;
+            line-height: 26px;
+            padding-left: 1px;
+            margin-top: 3px;
+            width: 40px;
+            text-align: left;
+        }
+        & p {
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 26px;
+            & a {
+                display: block;
+                float: left;
+                clear: both;
+                &:hover {
+                    color: $theme-color-one;
+                }
+            }
+        }
+    }
+}
+
+/*-- Contact Form Wrap --*/
+.contact-form-wrap {
+    & h3 {
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+}
+
+/*-- Contact Form --*/
+.contact-form {
+    & input {
+        display: block;
+        width: 100%;
+        height: 44px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        color: $body-color;
+        padding: 5px 15px;
+        &[type="submit"] {
+            width: auto;
+            border: none;
+            background-color: $heading-color;
+            color: $white;
+            text-transform: uppercase;
+            padding: 5px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            &:hover {
+                background-color: $theme-color-one;
+            }
+        }
+    }
+    & textarea {
+        display: block;
+        width: 100%;
+        height: 120px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        color: $body-color;
+        padding: 5px 15px;
+        resize: none;
+    }
+}

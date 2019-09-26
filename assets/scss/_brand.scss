@@ -1,0 +1,18 @@
+/*----------------------------------------*/
+/*  13. Brand CSS
+/*----------------------------------------*/
+.brand-slider {
+    width: 100%;
+    & .slick-track {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.brand-item {
+    text-align: center;
+    & img {
+        margin: auto;
+        max-width: 100%;
+    }
+}
